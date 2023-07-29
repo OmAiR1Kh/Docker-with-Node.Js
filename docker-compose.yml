@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  api: 
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+        PORT: 3000
+        MONGO_URI: mongodb+srv://alaa:alaa@cluster0.xfqu7pm.mongodb.net/?retryWrites=true&w=majority
+        DB_NAME: authentication
+        JWT_SECRET: 128ioanlf380h3iflnsn
+        TEST: test
+        BASE_URL: localhost:3000
+        EMAIL: bowi.apps7@gmail.com
+        PASSWORD: ujkurnekcgsrpcun
+    volumes:
+      - .env:/usr/src/app/.env
